@@ -1,42 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sidebar.css'
-import {assets} from '../../assets/assets'
+import { assets } from '../../assets/assets'
 
 const Sidebar = () => {
+  const [extended, setExtended] = useState(false)
+
+  function toggleMenu(){
+    setExtended(prev => !prev)
+  }
+
   return (
     <div className='sidebar'>
       <div className="top">
-        <img className = 'menu' src={assets.menu_icon} alt="Menu" />
+        <img onClick={toggleMenu} className='menu' src={assets.menu_icon} alt="Menu" />
         <div className="new-chat">
-          <img src={assets.plus_icon} alt="add icon" />
-          <p>New Chat</p>
+          <img  src={assets.plus_icon} alt="add icon" />
+          {extended ? <p>New Chat</p> : null}
         </div>
-        <div className='recent'>
-            <p className="recent-title">Recent</p>
-            <div className='recent-entry'>
-              <img src={assets.message_icon} alt="" />
-              <p className="">What is react</p>
-            </div>
+        {extended ? <div className='recent'>
+          <p className="recent-title">Recent</p>
+          <div className='recent-entry'>
+            <img src={assets.message_icon} alt="" />
+            <p className="">What is react</p>
           </div>
+        </div> : null}
       </div>
 
       <div className="bottom">
         <div className='bottom-container recent-entry' >
           <img src={assets.question_icon} alt="" />
-          <p className="">Help</p>
+          {extended ?<p className="">Help</p> :null}
         </div>
         <div className='bottom-container recent-entry' >
           <img src={assets.history_icon} alt="" />
-          <p className="">Activity</p>
+          {extended ? <p className="">Activity</p>:null}
         </div>
         <div className='bottom-container recent-entry' >
           <img src={assets.setting_icon} alt="" />
-          <p className="">Settings</p>
+          {extended ? <p className="">Settings</p> : null}
         </div>
-        
-        
 
-        
+
+
+
 
       </div>
 
