@@ -4,11 +4,9 @@ import { assets } from '../../assets/assets'
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false)
-
   function toggleMenu(){
     setExtended(prev => !prev)
   }
-
   return (
     <div className='sidebar'>
       <div className="top">
