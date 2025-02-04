@@ -37,11 +37,6 @@ const Sidebar = () => {
           <img src={assets.setting_icon} alt="" />
           {extended ? <p className="">Settings</p> : null}
         </div>
-
-
-
-
-
       </div>
     </div>
   )
