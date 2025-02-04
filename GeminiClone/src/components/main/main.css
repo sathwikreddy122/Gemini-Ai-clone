@@ -68,9 +68,11 @@
     width: 100%;
     max-width: 900px;
     padding: 0px 20px;
-    margin: auto auto 40px 150px;
+    /* margin: auto; */
+    left: 15%;
+    bottom: 5%;
 }
-.main-bottom .search-bar{
+.search-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;

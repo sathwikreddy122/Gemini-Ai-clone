@@ -15,6 +15,7 @@ const Main = () => {
           <p><span>Hello Developer.</span></p>
           <p>How can i help you</p>
         </div>
+        
         <section className="cards">
           <div className="card">
             <p>Suggest beautiful places to see on a upcoming road trips</p>
@@ -34,7 +35,6 @@ const Main = () => {
           </div>
         </section>
       </section>
-
 
       <section className="main-bottom">
         <div className="search-bar">
